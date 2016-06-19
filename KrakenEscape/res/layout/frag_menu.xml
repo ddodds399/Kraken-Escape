@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:contentDescription="@string/menu_back"
+    android:orientation="vertical" 
+    android:weightSum="4"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/start_button"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:layout_weight="1"
+        android:contentDescription="@string/startButton"
+        android:src="@drawable/portstart" />
+	
+	
+    <ImageView
+        android:id="@+id/high_button"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/highButton"
+        
+        android:layout_gravity="center"
+        android:src="@drawable/portcon" />
+
+    <ImageView
+        android:id="@+id/options_button"
+         android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/optButton"
+        android:layout_gravity="center"
+        android:src="@drawable/portopt" />
+
+    <ImageView
+        android:id="@+id/htp_button"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/htpButton"
+        android:layout_gravity="center"
+        android:src="@drawable/porthtp" />
+
+</LinearLayout>

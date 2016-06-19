@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout 
+     xmlns:krakenescape="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white">
+    
+    <ProgressBar
+    android:id="@+id/progressBar1"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="500dp"
+    android:minHeight="20dp"
+    android:progress="50"
+    android:max="100"
+    android:progressDrawable="@drawable/custombar1" />
+            
+    <eeecs.qub.ac.uk.gp13.InstructionPanel
+        android:id="@+id/instructionPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ipanel"
+        android:minHeight="20dp"
+        android:text="Press the buttons!"
+        android:textSize="18sp"
+        android:tileMode="repeat"
+        krakenescape:fontName="SFPixelate.ttf" >
+	</eeecs.qub.ac.uk.gp13.InstructionPanel>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight = "0.1" >
+
+        <ImageView
+            android:id="@+id/all_control_object_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30"
+            android:src="@drawable/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/all_control_object_flipswitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30"
+            android:src="@drawable/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/all_control_object_slidingswitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30"
+            android:src="@drawable/ic_launcher" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/all_control_object_xslider"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" >
+
+        <ImageView
+            android:id="@+id/all_control_object_dial"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/all_control_object_yslider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:src="@drawable/ic_launcher" />
+
+    </LinearLayout>
+
+</LinearLayout>
