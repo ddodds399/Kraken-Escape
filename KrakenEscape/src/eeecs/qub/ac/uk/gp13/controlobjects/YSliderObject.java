@@ -1,7 +1,17 @@
 package eeecs.qub.ac.uk.gp13.controlobjects;
 
+import eeecs.qub.ac.uk.gp13.calculations.MathematicalModulus;
 import android.widget.ImageView;
 
+/**
+ * 
+ * @author Josh McConnell 40105917
+ * 
+ * The YSliderObject constructor extends the MultiStateControlPanelObject
+ * This creates a YSliderObject which has 5 possible values
+ * A YSliderTouchListener should be used in conjunction with this
+ *
+ */
 public class YSliderObject extends MultiStateControlPanelObject
 {
 	ImageView image;
@@ -11,13 +21,18 @@ public class YSliderObject extends MultiStateControlPanelObject
 		image = iImage;
 	}
 	
-	public void findClosestPosition(double touchXValue)
+	/**
+	 * This method calculates which position is closest to the inputed touch location
+	 * 
+	 * @param touchYValue - the value of the Y touch position 
+	 */
+	public void findClosestPosition(double touchYValue)
 	{
 		double[] difference = new double[5];
 		for(int i = 0; i < difference.length; i++)
 		{
 			double pos = i * (image.getHeight() / 4);
-			difference[i] = MathematicalModulus.getAbsoluteValue(touchXValue - pos);
+			difference[i] = MathematicalModulus.getAbsoluteValue(touchYValue - pos);
 		}
 		
 		int closestPos = 0;

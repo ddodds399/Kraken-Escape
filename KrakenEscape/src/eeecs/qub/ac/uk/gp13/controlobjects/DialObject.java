@@ -1,15 +1,21 @@
 package eeecs.qub.ac.uk.gp13.controlobjects;
 
+import eeecs.qub.ac.uk.gp13.calculations.MathematicalModulus;
 
+/**
+ * 
+ * @author Josh McConnell 40105917
+ * 
+ * The DialObject constructor extends the MultiStateControlPanelObject
+ * This creates a dial object which has 8 possible values
+ * A DialTouchListener should be used in conjunction with this
+ *
+ */
 public class DialObject extends MultiStateControlPanelObject
 {
-	double[] thetaValue = new double[8];
+	double[] thetaValue = new double[9];
 	public DialObject(String iLabel, int iHeight, int iWidth)
 	{
-		//This creates the object without colored reference dots
-		//super(iLabel, iHeight, iWidth, "img/DialPos1.png", 1);
-		
-		//This creates the object with colored reference dots
 		super(iLabel, iHeight, iWidth, "img/Dial/Dial2Pos1.png", 1);
 		thetaValue[0] = Math.PI;
 		thetaValue[1] = 0.75 * Math.PI;
@@ -19,13 +25,25 @@ public class DialObject extends MultiStateControlPanelObject
 		thetaValue[5] = 1.75 * Math.PI;
 		thetaValue[6] = 1.5 * Math.PI;
 		thetaValue[7] = 1.25 * Math.PI;
+		thetaValue[8] = 2 * Math.PI;
 	}
 	
+	/**
+	 * This method gets the array which contains all of the different positions it is possible for the dial to register
+	 * 
+	 * @return - the array of theta values
+	 */
 	public double[] getThetaValue()
 	{
 		return thetaValue;
 	}
 	
+	/**
+	 * This method calculates the closest value of theta to the inputed touch location
+	 * This then calls the setValueSelected method to change the current selected value
+	 * 
+	 * @param touchThetaValue - the value of the touch position in radians (use polar converter class)
+	 */
 	public void findClosestPosition(double touchThetaValue)
 	{
 		double[] difference = new double[thetaValue.length];
@@ -46,16 +64,19 @@ public class DialObject extends MultiStateControlPanelObject
 			}
 		}
 		
-		setValueSelected(closestPos + 1);
+		if (closestPos == 8)
+		{
+			setValueSelected(5);
+		}
+		else
+		{
+			setValueSelected(closestPos + 1);
+		}
 	}
 	
 	@Override
 	public void setValueSelected(int newValueSelected)
 	{
-		//Reference dots not included
-		//super.setPicLoc("img/DialPos" + newValueSelected + ".png");
-		
-		//Reference dots included
 		super.setPicLoc("img/Dial/Dial2Pos" + newValueSelected + ".png");
 		
 		super.setValueSelected(newValueSelected);

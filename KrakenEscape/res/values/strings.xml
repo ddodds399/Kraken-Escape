@@ -14,9 +14,30 @@
 	<string name="musicText">Music On</string>
 	<string name="howToPlay">How To Play</string>
 	<string name="musicIO"></string>
+	<string name="difficultyText">Difficulty</string>
+	<string name="easyText">Easy</string>
+	<string name="hardText">Hard</string>
 	<string name="splash">Splashscreen</string>
 	<string name="logo">Logo</string>
 	<string name="title">Title</string>
 	<string name="htpButton">HowToPlay Button</string>
 	<color name="white">#FFFFFF</color>
+	<color name="black">#000000</color>
+	<string name="leaderboardButton">Leaderboard</string>
+	<string name="menuButton">Menu</string>
+	<string name="highScoreButton">Highscores</string>
+	<string name="resume">Resume</string>
+	
+	<!-- Missing Content ID tags for Main Game Fragment Image Views -->
+	
+	<string name ="scrollingview">scrollingviewport</string>
+	<string name ="horizontalslider">horizontalslider</string>
+	<string name ="vertslider">vertslider</string>
+	<string name ="flipswitch">flipswitch</string>
+	<string name ="vertflipswitch">vertflipswitch</string>
+	<string name ="slideswitch">slideswitch</string>
+	<string name ="dial">dial</string>
+	<string name="leaderboard_fragment_refreshButton">Refresh Button</string>
+	
+	
 </resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="388dp"
+	android:background="@drawable/pausemenu"
+	android:orientation="vertical">
+
+    <LinearLayout
+		android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        
+        <Button
+    		android:id="@+id/btn_resume"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:text="@string/resume"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/port">
+    </Button>
+<Button
+            android:id="@+id/btn_pausemenu"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:text="@string/menuButton"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/port">
+            
+   </Button>
+        
+    </LinearLayout>
+</RelativeLayout>

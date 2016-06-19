@@ -2,8 +2,10 @@
      xmlns:krakenescape="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/white">
+    android:orientation="vertical" 
+    android:background="@drawable/panel"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
     
     <ProgressBar
     android:id="@+id/progressBar1"
@@ -16,19 +18,21 @@
     android:max="100"
     android:progressDrawable="@drawable/custombar1" />
             
-    <eeecs.qub.ac.uk.gp13.InstructionPanel
+    <eeecs.qub.ac.uk.gp13.views.InstructionPanel
         android:id="@+id/instructionPanel"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/ipanel"
-        android:minHeight="20dp"
-        android:text="Press the buttons!"
+        android:minHeight="40dp"
+        android:text="@string/app_name"
         android:textSize="18sp"
         android:tileMode="repeat"
         krakenescape:fontName="SFPixelate.ttf" >
-	</eeecs.qub.ac.uk.gp13.InstructionPanel>
+	</eeecs.qub.ac.uk.gp13.views.InstructionPanel>
     
     <LinearLayout
+        android:background="@drawable/panel"
+    	android:tileMode="repeat"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight = "0.1" >
@@ -38,21 +42,24 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.30"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/ic_launcher"
+            android:contentDescription="@string/flipswitch" />
 
         <ImageView
             android:id="@+id/all_control_object_flipswitch"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.30"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/ic_launcher" 
+            android:contentDescription="@string/flipswitch"/>
 
         <ImageView
             android:id="@+id/all_control_object_slidingswitch"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.30"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/ic_launcher"
+            android:contentDescription="@string/flipswitch" />
     </LinearLayout>
 
     <ImageView
@@ -60,7 +67,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.1"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/ic_launcher" 
+        android:contentDescription="@string/horizontalslider"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,14 +80,16 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/ic_launcher" 
+            android:contentDescription="@string/dial"/>
 
         <ImageView
             android:id="@+id/all_control_object_yslider"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.1"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/ic_launcher"
+            android:contentDescription="@string/vertslider" />
 
     </LinearLayout>
 

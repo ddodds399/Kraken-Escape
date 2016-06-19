@@ -1,38 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><LinearLayout 
-     xmlns:krakenescape="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    android:focusable="true" 
+    android:id="@+id/mainlayout"
+    xmlns:krakenescape="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/white">
-    
-    <eeecs.qub.ac.uk.gp13.ViewPort
+    android:orientation="vertical"
+    >
+    <eeecs.qub.ac.uk.gp13.views.ViewPort
         android:id="@+id/ViewPort"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
-	</eeecs.qub.ac.uk.gp13.ViewPort>
+         
+	</eeecs.qub.ac.uk.gp13.views.ViewPort>
+	
     
     <ProgressBar
-    android:id="@+id/progressBar1"
-    style="?android:attr/progressBarStyleHorizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:minWidth="500dp"
-    android:minHeight="20dp"
-    android:progress="50"
-    android:max="100"
-    android:progressDrawable="@drawable/custombar1" />
+	    android:id="@+id/progressBar1"
+	    style="?android:attr/progressBarStyleHorizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:minWidth="500dp"
+	    android:minHeight="20dp"
+	    android:progress="50"
+	    android:max="100"
+	    android:progressDrawable="@drawable/custombar1" />
             
-    <eeecs.qub.ac.uk.gp13.InstructionPanel
-        android:id="@+id/instructionPanel"
+    <eeecs.qub.ac.uk.gp13.views.InstructionPanel android:id="@+id/instructionPanel"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/ipanel"
         android:minHeight="20dp"
-        android:text="Press the buttons!"
-        android:textSize="18sp"
+        android:text="@string/hello_world"
+        android:textSize="24sp"
         android:tileMode="repeat"
         krakenescape:fontName="SFPixelate.ttf" >
-	</eeecs.qub.ac.uk.gp13.InstructionPanel>
+	</eeecs.qub.ac.uk.gp13.views.InstructionPanel>
     
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,6 +48,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.30"
+            android:contentDescription="@string/flipswitch"
             android:src="@drawable/ic_launcher" />
 
         <ImageView
@@ -51,6 +56,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.30"
+            android:contentDescription="@string/flipswitch"
             android:src="@drawable/ic_launcher" />
 
         <ImageView
@@ -58,14 +64,16 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.30"
+            android:contentDescription="@string/slideswitch"
             android:src="@drawable/ic_launcher" />
     </LinearLayout>
 
     <ImageView
         android:id="@+id/all_control_object_xslider"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="0.1"
+        android:contentDescription="@string/horizontalslider"
         android:src="@drawable/ic_launcher" />
 
     <LinearLayout
@@ -78,6 +86,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
+            android:contentDescription="@string/dial"
             android:src="@drawable/ic_launcher" />
 
         <ImageView
@@ -85,8 +94,70 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.1"
+            android:contentDescription="@string/vertslider"
             android:src="@drawable/ic_launcher" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <eeecs.qub.ac.uk.gp13.views.ScoreTextView
+            android:id="@+id/fragment_main_game_scoretext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@drawable/scorepanel1"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:textColor="#FFFFFF"
+            krakenescape:fontName="SFPixelate-Bold.ttf" />
+
+        <eeecs.qub.ac.uk.gp13.views.ScoreTextView
+            android:id="@+id/fragment_main_game_livestext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@drawable/livespanel"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:textColor="#FFFFFF"
+            krakenescape:fontName="SFPixelate-Bold.ttf" />
+        
+        <eeecs.qub.ac.uk.gp13.views.ScoreTextView
+            android:id="@+id/fragment_main_game_speedtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@drawable/speedpanel"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:textColor="#FFFFFF"
+            krakenescape:fontName="SFPixelate-Bold.ttf" />
+        
+        <eeecs.qub.ac.uk.gp13.views.ScoreTextView
+            android:id="@+id/fragment_main_game_depthtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@drawable/depthpanel"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:textColor="#FFFFFF"
+            krakenescape:fontName="SFPixelate-Bold.ttf" />
+        
+        <eeecs.qub.ac.uk.gp13.views.ScoreTextView
+            android:id="@+id/fragment_main_game_yawtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@drawable/yawpanel"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:textColor="#FFFFFF"
+            krakenescape:fontName="SFPixelate-Bold.ttf" />
+        
     </LinearLayout>
 
 </LinearLayout>

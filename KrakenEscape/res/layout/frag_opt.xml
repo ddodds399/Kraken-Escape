@@ -27,4 +27,45 @@
         android:layout_marginRight="24dp"
         android:text="@string/musicIO" />
 
+<RadioGroup
+    android:id="@+id/radioDiff"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/difficulty_text"
+    android:layout_alignParentRight="true"
+    android:orientation="horizontal" >
+
+    <RadioButton
+        android:id="@+id/radioEasy"
+        android:layout_marginRight="54dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/easyText"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="#FFFFFF" 
+        android:onClick="onRadioClicked"/>
+
+    <RadioButton
+        android:id="@+id/radioHard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/hardText"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="#FFFFFF" 
+        android:onClick="onRadioClicked"/>
+</RadioGroup>
+
+<TextView
+    android:id="@+id/difficulty_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/music_text"
+    android:layout_below="@+id/switch1"
+    android:layout_marginTop="14dp"
+    android:text="@string/difficultyText"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:textColor="#FFFFFF" />
+
 </RelativeLayout>

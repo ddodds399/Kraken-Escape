@@ -1,5 +1,14 @@
 package eeecs.qub.ac.uk.gp13.controlobjects;
 
+/**
+ * 
+ * @author Josh McConnell 40105917
+ *
+ * The FlipSwitchObject constructor extends the TwoStateControlPanelObject
+ * This creates a flip switch object which has 2 possible values
+ * A two state click listener should be used in conjunction with this
+ * 
+ */
 public class FlipSwitchObject extends TwoStateControlPanelObject
 {
 	public FlipSwitchObject(String iLabel, int iHeight, int iWidth)

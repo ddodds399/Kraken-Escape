@@ -28,7 +28,7 @@
         android:contentDescription="@string/highButton"
         
         android:layout_gravity="center"
-        android:src="@drawable/portcon" />
+        android:src="@drawable/porths" />
 
     <ImageView
         android:id="@+id/options_button"

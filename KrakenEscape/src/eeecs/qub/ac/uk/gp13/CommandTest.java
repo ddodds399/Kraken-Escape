@@ -1,5 +1,7 @@
 package eeecs.qub.ac.uk.gp13;
 
+import eeecs.qub.ac.uk.gp13.maingame.Command;
+import eeecs.qub.ac.uk.gp13.maingame.RandSelect;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;

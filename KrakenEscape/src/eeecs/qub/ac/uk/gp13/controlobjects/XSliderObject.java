@@ -1,7 +1,17 @@
 package eeecs.qub.ac.uk.gp13.controlobjects;
 
+import eeecs.qub.ac.uk.gp13.calculations.MathematicalModulus;
 import android.widget.ImageView;
 
+/**
+ * 
+ * @author Josh McConnell 40105917
+ * 
+ * The XSliderObject constructor extendsm the MultiStateControlPanelObject
+ * This creates an x slider object which has 5 possible values
+ * A XSliderTouchListener should be used in conjunction with this
+ *
+ */
 public class XSliderObject extends MultiStateControlPanelObject
 {
 	ImageView image;
@@ -11,6 +21,11 @@ public class XSliderObject extends MultiStateControlPanelObject
 		image = iImage;
 	}
 	
+	/**
+	 * This method calculates which position is closest to the inputed touch location
+	 * 
+	 * @param touchXValue - the value of the x touch position 
+	 */
 	public void findClosestPosition(double touchXValue)
 	{
 		double[] difference = new double[5];
